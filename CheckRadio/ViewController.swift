@@ -14,26 +14,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn_radio1: DLRadioButton!
     @IBOutlet weak var btn_radio2: DLRadioButton!
     @IBOutlet weak var btn_radio3: DLRadioButton!
+    @IBOutlet weak var img_selected: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         btn_check.isMultipleSelectionEnabled = true
-        btn_radio1.isEnabled = false
-        btn_radio2.isEnabled = false
-        btn_radio3.isEnabled = false
+        setRadioButton(flag: false)
         
 
     }
     
+    @IBAction func completeClicked(_ sender: UIButton) {
+        if btn_radio1.isSelected {
+            img_selected.image = #imageLiteral(resourceName: "석굴암")
+        } else if btn_radio2.isSelected {
+            img_selected.image = #imageLiteral(resourceName: "남대문")
+        } else if btn_radio3.isSelected {
+            img_selected.image = #imageLiteral(resourceName: "독립기념관")
+        }
+    }
+    func setRadioButton(flag: Bool) {
+        btn_radio1.isEnabled = flag
+        btn_radio2.isEnabled = flag
+        btn_radio3.isEnabled = flag
+    }
+    
     @IBAction func startClicked(_ sender: DLRadioButton) {
         if btn_check.isSelected {
-            btn_radio1.isEnabled = true
-            btn_radio2.isEnabled = true
-            btn_radio3.isEnabled = true
+            setRadioButton(flag: true)
         } else {
-            btn_radio1.isEnabled = false
-            btn_radio2.isEnabled = false
-            btn_radio3.isEnabled = false
+            setRadioButton(flag: false)
         }
     }
     

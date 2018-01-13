@@ -79,6 +79,20 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-eh-hek">
+                                <rect key="frame" x="77" y="366" width="98" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="선택완료">
+                                    <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOq-uO-Cws"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVd-0N-xRx">
+                                <rect key="frame" x="67" y="430" width="240" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,6 +102,7 @@
                         <outlet property="btn_radio1" destination="LGX-Sb-LbY" id="9ye-jQ-BLv"/>
                         <outlet property="btn_radio2" destination="7Hi-lP-niJ" id="1fc-hz-gVl"/>
                         <outlet property="btn_radio3" destination="JJv-4R-h4I" id="VhZ-B5-L7u"/>
+                        <outlet property="img_selected" destination="bVd-0N-xRx" id="eVl-Oe-n09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
